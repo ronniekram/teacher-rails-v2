@@ -1,3 +1,16 @@
 <h1>Hello, <%= current_user.name %>!</h1>
  <p> Add a <%= link_to "book", new_book_path %> to the library.</p>
  <p> Create a new <%= link_to "lesson plan.", new_lesson_plan_path %></p>
+
+
+<div class="row">
+  <div class="col">
+    <div class="d-flex justify-content-center align-items-center" style="background-color: rgba(210,194,179,0.83);border: 1px solid rgb(27,26,26);border-radius: 5px;padding: 5px;margin: 15px 15px 10px 10px;text-align: center;">
+      <h3 style="font-family: Lora, serif;">Hello, <%= current_user.name %>!</h3> <br>
+
+      <p> Add a <%= link_to "book", new_book_path %> to the library.</p>
+      <p> Create a new <%= link_to "lesson plan.", new_lesson_plan_path %></p>
+      
+    </div>
+  </div>
+</div>
