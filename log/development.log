@@ -23662,3 +23662,91 @@ Processing by RegistrationsController#new as HTML
 Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms | Allocations: 10070)
 
 
+Started GET "/users/sign_up" for ::1 at 2020-11-16 15:24:36 -0500
+Processing by RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.6ms | Allocations: 205)
+  Rendered users/registrations/_form.html.erb (Duration: 3.5ms | Allocations: 633)
+  Rendered users/shared/_links.html.erb (Duration: 3.8ms | Allocations: 555)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 3217)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 2.7ms | Allocations: 791)
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | Allocations: 91)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.0ms | Allocations: 12091)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-11-16 15:24:47 -0500
+Processing by RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 205)
+  Rendered users/registrations/_form.html.erb (Duration: 1.5ms | Allocations: 633)
+  Rendered users/shared/_links.html.erb (Duration: 2.9ms | Allocations: 555)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 3209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 2.1ms | Allocations: 791)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 91)
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.0ms | Allocations: 12039)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-11-16 15:24:52 -0500
+Processing by RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered users/registrations/_form.html.erb (Duration: 0.9ms | Allocations: 444)
+  Rendered users/shared/_links.html.erb (Duration: 1.0ms | Allocations: 145)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 255)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 7716)
+
+
+Started GET "/" for ::1 at 2020-11-16 15:24:57 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-16 15:24:57 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.4ms | Allocations: 200)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1445)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.6ms | Allocations: 255)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.0ms | Allocations: 8206)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-16 15:25:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | Allocations: 199)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 249)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 7190)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-16 15:26:58 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.3ms | Allocations: 616)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 2009)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 1.9ms | Allocations: 791)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 91)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.0ms | Allocations: 10535)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-16 15:27:23 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.9ms | Allocations: 611)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2000)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 3.7ms | Allocations: 791)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 91)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms | Allocations: 10535)
+
+

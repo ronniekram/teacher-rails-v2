@@ -1,18 +1,21 @@
+
+<div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+
 <h2>Log in</h2>
-<div class="form-container">
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  <div class="form-group d-flex flex-wrap">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
+  <div class="form-group d-flex flex-wrap">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="form-group d-flex flex-wrap">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
@@ -22,5 +25,7 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
-</div>
+
 <%= render "users/shared/links" %>
+</div>
+
