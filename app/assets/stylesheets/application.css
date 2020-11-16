@@ -144,6 +144,25 @@ a {
   color: rgb(55,50,46);
 }
 
+.flex-wrap {
+  -ms-flex-wrap: wrap!important;
+  flex-wrap: wrap!important;
+}
+
+.float-left {
+  float: left!important;
+}
+
+
+.d-flex {
+  display: -ms-flexbox!important;
+  display: flex!important;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
 
 .footer-basic {
   padding: 15px 0;

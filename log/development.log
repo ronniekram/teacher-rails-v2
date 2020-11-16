@@ -23632,3 +23632,33 @@ Processing by RegistrationsController#new as HTML
 Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 9689)
 
 
+Started GET "/" for ::1 at 2020-11-16 15:22:42 -0500
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms | Allocations: 1280)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-16 15:22:42 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 2.7ms | Allocations: 735)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 28.0ms | Allocations: 3126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 3.2ms | Allocations: 826)
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | Allocations: 97)
+Completed 200 OK in 656ms (Views: 608.6ms | ActiveRecord: 21.8ms | Allocations: 51642)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-11-16 15:22:49 -0500
+Processing by RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.1ms | Allocations: 214)
+  Rendered users/registrations/_form.html.erb (Duration: 4.8ms | Allocations: 786)
+  Rendered users/shared/_links.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2940)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 255)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms | Allocations: 10070)
+
+
