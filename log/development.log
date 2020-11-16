@@ -23343,3 +23343,292 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.2ms | Allocations: 12872)
 
 
+Started GET "/" for ::1 at 2020-11-15 19:02:12 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.9ms | Allocations: 346)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 81ms (Views: 70.6ms | ActiveRecord: 3.0ms | Allocations: 14812)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:02:42 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.8ms | Allocations: 341)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 50ms (Views: 45.1ms | ActiveRecord: 0.3ms | Allocations: 15253)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-11-15 19:03:27 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PajpJwXggiDw5gOKY17yOivLyK/ppzB+i9s5xL7s047ayB1CytasRmVhg4V6hVJViwZBOHujfqphTXj2uORvlQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 46ms (ActiveRecord: 0.3ms | Allocations: 6089)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:03:27 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 337)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-15 19:03:27 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 3.1ms | Allocations: 730)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 25.8ms | Allocations: 2987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 255)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 65ms (Views: 48.5ms | ActiveRecord: 0.0ms | Allocations: 10099)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-15 19:04:25 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.5ms | Allocations: 199)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 249)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.0ms | Allocations: 12950)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-15 19:05:11 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.4ms | Allocations: 199)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.7ms | Allocations: 249)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 13869)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-15 19:08:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.5ms | Allocations: 199)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 249)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.0ms | Allocations: 15611)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-15 19:09:43 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.7ms | Allocations: 199)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 249)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 7159)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-15 19:11:08 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | Allocations: 199)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 5.1ms | Allocations: 249)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 100ms (Views: 98.6ms | ActiveRecord: 0.0ms | Allocations: 15114)
+
+
+Started GET "/users/auth/github" for ::1 at 2020-11-15 19:11:55 -0500
+Started GET "/users/auth/github" for ::1 at 2020-11-15 19:11:55 -0500
+Started GET "/users/sign_up" for ::1 at 2020-11-15 19:12:19 -0500
+Processing by RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.2ms | Allocations: 214)
+  Rendered users/registrations/_form.html.erb (Duration: 5.2ms | Allocations: 785)
+  Rendered users/shared/_links.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 2940)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.6ms | Allocations: 255)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms | Allocations: 10052)
+
+
+Started POST "/users" for ::1 at 2020-11-15 19:12:47 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"9LpIX1bDmHNIB7ey3MumE4rpFRrOgZ30baTdUDcPL4flDw80/amwzDiZVlHoxhKdZDbAlJcFsV1VhSguGwZ0lg==", "user"=>{"email"=>"ronnie@ronnie.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "name"=>"ronnie", "grade"=>"2nd"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password_confirmation[0m
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ronnie@ronnie.com"], ["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 227)
+  Rendered users/registrations/_form.html.erb (Duration: 0.3ms | Allocations: 425)
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 143)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1837)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 249)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 369ms (Views: 13.8ms | ActiveRecord: 6.7ms | Allocations: 18550)
+
+
+Started GET "/login" for ::1 at 2020-11-15 19:12:52 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.8ms | Allocations: 200)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.8ms | Allocations: 255)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 7196)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-11-15 19:13:01 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"wQZNkwRoyS9k9s7DZKD6y8TI57Js31h0+yYu7t5Ht0KwIZALvjGHr24gwTWGFxvLCUCWwESo2usDV2Wxk23qvw==", "user"=>{"email"=>"ronnie@ronnie.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ronnie@ronnie.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 305ms (ActiveRecord: 1.0ms | Allocations: 3875)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:13:02 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 9.3ms | Allocations: 346)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.3ms | Allocations: 7466)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:15:15 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 2.9ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | Allocations: 91)
+Completed 200 OK in 45ms (Views: 38.9ms | ActiveRecord: 0.3ms | Allocations: 9673)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:17:08 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 217)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 2.7ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 1.7ms | Allocations: 91)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 0.4ms | Allocations: 9668)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:19:44 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 1.3ms | Allocations: 346)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.5ms | Allocations: 14005)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:21:55 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 2.9ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | Allocations: 91)
+Completed 200 OK in 53ms (Views: 49.2ms | ActiveRecord: 0.3ms | Allocations: 16603)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:21:59 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 1.4ms | Allocations: 346)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 7441)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:23:05 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 341)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 68ms (Views: 35.5ms | ActiveRecord: 17.3ms | Allocations: 15327)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:23:08 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 341)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.5ms | Allocations: 7428)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:23:16 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 341)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 7429)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-11-15 19:32:41 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"86CkDPJNG7hoE5/VgrkQNE+qwuLSeqpv9m5LxwW6cJwCU8XCs2MqV8lGEImH/d/TbGJilFP9zRikKpfjkg2ZDw=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms | Allocations: 2372)
+
+
+Started GET "/" for ::1 at 2020-11-15 19:32:41 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 325)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-15 19:32:41 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 3.1ms | Allocations: 611)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1995)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 255)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.0ms | Allocations: 9092)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-11-15 19:32:43 -0500
+Processing by RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 205)
+  Rendered users/registrations/_form.html.erb (Duration: 2.3ms | Allocations: 633)
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | Allocations: 146)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2664)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 255)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 9689)
+
+
