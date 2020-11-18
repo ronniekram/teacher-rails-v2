@@ -1,3 +1,4 @@
+ <div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
 <h3>Title: <%= @book.title %></h3>
 <h3>Author: <%= @book.author %></h3>
 <h3>Publisher: <%= @book.publisher %></h3>
@@ -8,4 +9,5 @@
   <% end %>
 </p> <br>
 
-<%= link_to "Edit Book", edit_book_path(@book) %> | <%= link_to "Back To Library", books_path %>
+<%= link_to "Edit Book", edit_book_path(@book), class="link" %> | <%= link_to "Back To Library", books_path, class="link" %>
+</div>

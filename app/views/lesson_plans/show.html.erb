@@ -10,10 +10,10 @@
 
   <p>Book(s): 
     <% @lesson_plan.books.each do |book| %>
-      <li> <%= link_to "#{book.title} - #{book.author}", book_path(book) %> </li>
+      <li> <%= link_to "#{book.title} - #{book.author}", book_path(book), class="link" %> </li>
     <% end %>
   </p> <br>
 
-  <%= link_to "Edit Lesson Plan", edit_lesson_plan_path(@lesson_plan) %>
+  <%= link_to "Edit Lesson Plan", edit_lesson_plan_path(@lesson_plan), class="link" %>
 
 </div>
