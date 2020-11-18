@@ -25,12 +25,12 @@
 
 <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @lesson_plan.errors[:start_date].any? %>">
   <%= f.label :start_date, "Start Date: " %>
-  <%= f.date_field :start_date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %> <br>
+  <%= f.date_field :start_date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control', :style=> '1px solid rgb(27,26,26);' %> <br>
 </div >
 
 <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @lesson_plan.errors[:duration].any? %>">
   <%= f.label :duration, "Duration (in days): " %>
-  <%= f.number_field :duration %> <br>
+  <%= f.number_field :duration, :style=> '1px solid rgb(27,26,26);' %> <br>
 </div >
 
   <%= f.submit %>

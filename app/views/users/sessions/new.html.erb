@@ -6,12 +6,12 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-group d-flex flex-wrap">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :style=> '1px solid rgb(27,26,26);' %>
   </div>
 
   <div class="form-group d-flex flex-wrap">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", :style=> '1px solid rgb(27,26,26);' %>
   </div>
 
   <% if devise_mapping.rememberable? %>
