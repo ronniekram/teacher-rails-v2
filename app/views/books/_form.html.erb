@@ -1,28 +1,28 @@
-<div class="form-container">
+<div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
 <%= form_for @book do |f| %>
 
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:title].any? %>">
   <%= f.label :title, "Title: " %> <br>
-<div class="field<%= ' field_with_errors' if @book.errors[:title].any? %>">
   <%= f.text_field :title %>
 </div> <br>
 
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
   <%= f.label :author, "Author: " %> <br>
-<div class="field<%= ' field_with_errors' if @book.errors[:author].any? %>">
   <%= f.text_field :author %>
 </div> <br>
 
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
   <%= f.label :publisher, "Publisher: " %> <br>
-<div class="field<%= ' field_with_errors' if @book.errors[:author].any? %>">
   <%= f.text_field :publisher %>
 </div> <br>
 
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
   <%= f.label :pages, "Pages: " %> <br>
-<div class="field<%= ' field_with_errors' if @book.errors[:author].any? %>">
   <%= f.number_field :pages %>
 </div> <br>
 
-  <%= f.label :subjects, "Subject(s): " %> <br>
   <div class="checkbox-container">
+    <%= f.label :subjects, "Subject(s): " %> <br>
     <%= f.collection_check_boxes :subject_ids, Subject.all, :id, :sub_name, class: 'checkbox' %>
   </div>  <br>
 
