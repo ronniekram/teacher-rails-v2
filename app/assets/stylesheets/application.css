@@ -132,6 +132,13 @@ dl, ol, ul {
   text-decoration: none;
   background-color: transparent;
   color: rgb(55,50,46);
+  line-height: 1rem;
+}
+
+.link:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: rgb(35,32,29);
 }
 
 ul {
@@ -166,6 +173,48 @@ li {
   display: block;
   padding-left: 1.25rem;
 }
+
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.input {
+  border: 1px solid rgb(27,26,26);
+  border-radius: 5px;
+}
+
+.btn .btn-primary{
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  background: rgba(204,80,65,0.95);
+  border: 1px solid rgb(27,26,26) ;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+
+
 
 
 .footer-basic {

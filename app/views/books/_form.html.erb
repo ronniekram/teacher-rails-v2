@@ -3,22 +3,22 @@
 
 <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:title].any? %>">
   <%= f.label :title, "Title: " %> <br>
-  <%= f.text_field :title, :style=> '1px solid rgb(27,26,26);' %>
+  <%= f.text_field :title, class: 'input' %>
 </div> <br>
 
 <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
   <%= f.label :author, "Author: " %> <br>
-  <%= f.text_field :author, :style=> '1px solid rgb(27,26,26);' %>
+  <%= f.text_field :author, class: 'input' %>
 </div> <br>
 
 <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
   <%= f.label :publisher, "Publisher: " %> <br>
-  <%= f.text_field :publisher, :style=> '1px solid rgb(27,26,26);' %>
+  <%= f.text_field :publisher, class: 'input' %>
 </div> <br>
 
 <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
   <%= f.label :pages, "Pages: " %> <br>
-  <%= f.number_field :pages, :style=> '1px solid rgb(27,26,26);' %>
+  <%= f.number_field :pages, class: 'input' %>
 </div> <br>
 
   <div class="form-check">
@@ -26,5 +26,5 @@
     <%= f.collection_check_boxes :subject_ids, Subject.all, :id, :sub_name, class: 'checkbox' %>
   </div>  <br>
 
-<%= f.submit %>
+<%= f.submit, class: 'btn' %>
 <% end %>

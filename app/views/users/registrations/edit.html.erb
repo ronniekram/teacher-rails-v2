@@ -23,18 +23,18 @@
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", :style=> '1px solid rgb(27,26,26);' %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'input' %>
   </div>
 
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password", :style=> '1px solid rgb(27,26,26);' %>
+    <%= f.password_field :current_password, autocomplete: "current-password", class: 'input' %>
   </div> <br>
 
   <%= render partial: 'form', locals: { :f => f } %>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", class: 'btn' %>
   </div>
 <% end %>
 
