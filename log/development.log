@@ -24097,3 +24097,77 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.5ms | Allocations: 15374)
 
 
+Started GET "/books" for ::1 at 2020-11-18 14:40:06 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1114)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms | Allocations: 4046)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check   <%= render 'search' %>
+
+
+<div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+
+  <% @books.each do |book| %>
+    <li> <%= link_to "#{book.title} - #{book.author}", book_path(book), class = "link" %> </li>
+  <% end %>
+
+</div>
+):
+1:      <%= render 'search' %>
+2:    
+3:    
+4:    <div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+5:    
+6:      <% @books.each do |book| %>
+7:        <li> <%= link_to "#{book.title} - #{book.author}", book_path(book), class = "link" %> </li>
+8:      <% end %>
+9:    
+10:    </div>
+  
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+Started GET "/books" for ::1 at 2020-11-18 14:40:33 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1109)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 3936)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check   <%= render 'search' %>
+
+
+<div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+
+  <% @books.each do |book| %>
+    <li> <%= link_to "#{book.title} - #{book.author}", book_path(book), class="link" %> </li>
+  <% end %>
+
+</div>
+):
+1:      <%= render 'search' %>
+2:    
+3:    
+4:    <div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+5:    
+6:      <% @books.each do |book| %>
+7:        <li> <%= link_to "#{book.title} - #{book.author}", book_path(book), class="link" %> </li>
+8:      <% end %>
+9:    
+10:    </div>
+  
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+app/views/books/index.html.erb:7: syntax error, unexpected '='
+app/views/books/index.html.erb:7: syntax error, unexpected '='

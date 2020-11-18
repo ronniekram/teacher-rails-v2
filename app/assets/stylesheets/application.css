@@ -108,37 +108,27 @@ button:focus {
   list-style: none;
 }
 
-.nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
-
 dl, ol, ul {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
 
-.navbar-nav .nav-link {
+.navbar-nav .nav-link .link {
   padding-right: 0;
   padding-left: 0;
 }
 
-.nav-link:focus, .nav-link:hover {
+.nav-link:focus, .nav-link:hover .link:hover{
   text-decoration: none;
 }
 
-.nav-link {
+.nav-link .link {
   display: block;
   padding: .5rem 1rem;
 }
 
-a {
+.link {
   text-decoration: none;
   background-color: transparent;
   color: rgb(55,50,46);
