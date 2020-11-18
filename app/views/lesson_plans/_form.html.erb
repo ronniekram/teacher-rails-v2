@@ -18,8 +18,8 @@
     <% end %>
   </div>
 
-  <%= f.label :books, "Book(s): " %> <br>
-  <div class="checkbox-container">
+  <div class="form-check">
+    <%= f.label :books, "Book(s): " %> <br>
     <%= f.collection_check_boxes :book_ids, Book.all, :id, :title, class: 'checkbox' %>
   </div>  <br>
 

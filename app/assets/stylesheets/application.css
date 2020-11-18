@@ -163,6 +163,12 @@ a {
   margin-bottom: 1rem;
 }
 
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: 1.25rem;
+}
+
 
 .footer-basic {
   padding: 15px 0;
