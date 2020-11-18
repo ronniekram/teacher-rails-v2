@@ -6,7 +6,7 @@
   <%= render 'form' %>
 
   <%= form_tag lesson_plan_path(@lesson_plan), :method => :delete, data: {confirm: "Are you sure?"} do %>
-    <%= submit_tag "Delete Lesson Plan" %>
+    <%= submit_tag "Delete Lesson Plan", class: 'btn' %>
   <% end %>
 
 </div>

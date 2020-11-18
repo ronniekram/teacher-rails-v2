@@ -11,7 +11,7 @@
 
     def create 
       @book = Book.create(book_params)
-      if @book.save
+      if @book
         redirect_to @book
       else 
         render :new 

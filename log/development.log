@@ -24559,3 +24559,418 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms | Allocations: 17075)
 
 
+Started GET "/users/sign_in" for ::1 at 2020-11-18 16:25:17 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.3ms | Allocations: 647)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2065)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.7ms | Allocations: 398)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms | Allocations: 17044)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-11-18 16:32:58 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"XQGYLJPOW2lU0xBUsjb22XGhfEzmiss34XzfQscP0oiLHEZf+lFWw8MRStrphh3XGcMeu8OaHvxxmz1c/5IoYA==", "user"=>{"email"=>"ronnie@ronnie.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ronnie@ronnie.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 281ms (ActiveRecord: 0.8ms | Allocations: 12308)
+
+
+Started GET "/" for ::1 at 2020-11-18 16:32:58 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.2ms | Allocations: 149)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 7809)
+
+
+Started GET "/books" for ::1 at 2020-11-18 16:33:03 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_search.html.erb (Duration: 0.5ms | Allocations: 1217)
+  Rendered books/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1592)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms | Allocations: 6007)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+<%= form_tag(books_path, method: :get) do %>
+  <div class="form-group d-flex flex-wrap">
+    <%= label_tag "Search By Title: " %>
+    <%= text_field_tag(:search, params[:search]), :style=> '1px solid rgb(27,26,26);' %> 
+    <%= submit_tag "Search!", :title => nil, class: 'btn' %>
+  </div>
+<% end %>
+</div>
+):
+1:    <div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+2:    <%= form_tag(books_path, method: :get) do %>
+3:      <div class="form-group d-flex flex-wrap">
+4:        <%= label_tag "Search By Title: " %>
+5:        <%= text_field_tag(:search, params[:search]), :style=> '1px solid rgb(27,26,26);' %> 
+6:        <%= submit_tag "Search!", :title => nil, class: 'btn' %>
+7:      </div>
+8:    <% end %>
+9:    </div>
+  
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/index.html.erb:1
+Started GET "/books" for ::1 at 2020-11-18 16:33:42 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_search.html.erb (Duration: 1.0ms | Allocations: 1268)
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1643)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms | Allocations: 4474)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+<%= form_tag(books_path, method: :get) do %>
+  <div class="form-group d-flex flex-wrap">
+    <%= label_tag "Search By Title: " %>
+    <%= text_field_tag(:search, params[:search]), class: 'input' %> 
+    <%= submit_tag "Search!", :title => nil, class: 'btn' %>
+  </div>
+<% end %>
+</div>
+):
+1:    <div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+2:    <%= form_tag(books_path, method: :get) do %>
+3:      <div class="form-group d-flex flex-wrap">
+4:        <%= label_tag "Search By Title: " %>
+5:        <%= text_field_tag(:search, params[:search]), class: 'input' %> 
+6:        <%= submit_tag "Search!", :title => nil, class: 'btn' %>
+7:      </div>
+8:    <% end %>
+9:    </div>
+  
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/books/index.html.erb:1
+Started GET "/books" for ::1 at 2020-11-18 16:34:05 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_search.html.erb (Duration: 1.2ms | Allocations: 1268)
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1643)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 4473)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+<%= form_tag(books_path, method: :get) do %>
+  <div class="form-group d-flex flex-wrap">
+    <%= label_tag "Search By Title: " %>
+    <%= text_field_tag(:search, params[:search]) class: 'input' %> 
+    <%= submit_tag "Search!", :title => nil, class: 'btn' %>
+  </div>
+<% end %>
+</div>
+):
+1:    <div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+2:    <%= form_tag(books_path, method: :get) do %>
+3:      <div class="form-group d-flex flex-wrap">
+4:        <%= label_tag "Search By Title: " %>
+5:        <%= text_field_tag(:search, params[:search]) class: 'input' %> 
+6:        <%= submit_tag "Search!", :title => nil, class: 'btn' %>
+7:      </div>
+8:    <% end %>
+9:    </div>
+  
+app/views/books/_search.html.erb:5: syntax error, unexpected tLABEL, expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected tLABEL, expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected tLABEL, expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected tLABEL, expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected tLABEL, expecting ')'
+app/views/books/_search.html.erb:5: syntax error, unexpected tLABEL, expecting ')'
+app/views/books/index.html.erb:1
+Started GET "/books" for ::1 at 2020-11-18 16:34:31 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_search.html.erb (Duration: 0.6ms | Allocations: 393)
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 7257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.6ms | Allocations: 429)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+Completed 200 OK in 33ms (Views: 19.7ms | ActiveRecord: 2.2ms | Allocations: 16047)
+
+
+Started GET "/users/lesson_plans" for ::1 at 2020-11-18 16:34:38 -0500
+Processing by LessonPlansController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lesson_plans/index.html.erb within layouts/application
+  [1m[36mLessonPlan Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "lesson_plans" WHERE "lesson_plans"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/lesson_plans/index.html.erb:5
+  Rendered lesson_plans/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.2ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 9.8ms | ActiveRecord: 2.3ms | Allocations: 11035)
+
+
+Started GET "/users/lesson_plans" for ::1 at 2020-11-18 16:34:39 -0500
+Processing by LessonPlansController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lesson_plans/index.html.erb within layouts/application
+  [1m[36mLessonPlan Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "lesson_plans" WHERE "lesson_plans"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/lesson_plans/index.html.erb:5
+  Rendered lesson_plans/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 21ms (Views: 14.5ms | ActiveRecord: 1.1ms | Allocations: 7799)
+
+
+Started GET "/" for ::1 at 2020-11-18 16:34:45 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.2ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.4ms | Allocations: 7755)
+
+
+Started GET "/books/new" for ::1 at 2020-11-18 16:34:47 -0500
+Processing by BooksController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_error.html.erb (Duration: 0.6ms | Allocations: 176)
+  Rendered books/_form.html.erb (Duration: 1.2ms | Allocations: 1395)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2095)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms | Allocations: 9706)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<%= form_for @book do |f| %>
+
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:title].any? %>">
+  <%= f.label :title, "Title: " %> <br>
+  <%= f.text_field :title, class: 'input' %>
+</div> <br>
+
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+  <%= f.label :author, "Author: " %> <br>
+  <%= f.text_field :author, class: 'input' %>
+</div> <br>
+
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+  <%= f.label :publisher, "Publisher: " %> <br>
+  <%= f.text_field :publisher, class: 'input' %>
+</div> <br>
+
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+  <%= f.label :pages, "Pages: " %> <br>
+  <%= f.number_field :pages, class: 'input' %>
+</div> <br>
+
+  <div class="form-check">
+    <%= f.label :subjects, "Subject(s): " %> <br>
+    <%= f.collection_check_boxes :subject_ids, Subject.all, :id, :sub_name, class: 'checkbox' %>
+  </div>  <br>
+
+<%= f.submit, class: 'btn' %>
+<% end %>
+):
+1:    
+2:    <%= form_for @book do |f| %>
+3:    
+4:    <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:title].any? %>">
+5:      <%= f.label :title, "Title: " %> <br>
+6:      <%= f.text_field :title, class: 'input' %>
+7:    </div> <br>
+8:    
+9:    <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+10:      <%= f.label :author, "Author: " %> <br>
+11:      <%= f.text_field :author, class: 'input' %>
+12:    </div> <br>
+13:    
+14:    <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+15:      <%= f.label :publisher, "Publisher: " %> <br>
+16:      <%= f.text_field :publisher, class: 'input' %>
+17:    </div> <br>
+18:    
+19:    <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+20:      <%= f.label :pages, "Pages: " %> <br>
+21:      <%= f.number_field :pages, class: 'input' %>
+22:    </div> <br>
+23:    
+24:      <div class="form-check">
+25:        <%= f.label :subjects, "Subject(s): " %> <br>
+26:        <%= f.collection_check_boxes :subject_ids, Subject.all, :id, :sub_name, class: 'checkbox' %>
+27:      </div>  <br>
+28:    
+29:    <%= f.submit, class: 'btn' %>
+30:    <% end %>
+  
+app/views/books/_form.html.erb:29: syntax error, unexpected tLABEL, expecting '='
+app/views/books/_form.html.erb:29: syntax error, unexpected tLABEL, expecting '='
+app/views/books/_form.html.erb:29: syntax error, unexpected tLABEL, expecting '='
+app/views/books/_form.html.erb:29: syntax error, unexpected tLABEL, expecting '='
+app/views/books/_form.html.erb:29: syntax error, unexpected tLABEL, expecting '='
+app/views/books/_form.html.erb:29: syntax error, unexpected tLABEL, expecting '='
+app/views/books/new.html.erb:5
+Started GET "/books/new" for ::1 at 2020-11-18 16:35:43 -0500
+Processing by BooksController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_error.html.erb (Duration: 0.5ms | Allocations: 173)
+  Rendered books/_form.html.erb (Duration: 1.0ms | Allocations: 1465)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2158)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms | Allocations: 5296)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<%= form_for @book do |f| %>
+
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:title].any? %>">
+  <%= f.label :title, "Title: " %> <br>
+  <%= f.text_field :title, class: 'input' %>
+</div> <br>
+
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+  <%= f.label :author, "Author: " %> <br>
+  <%= f.text_field :author, class: 'input' %>
+</div> <br>
+
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+  <%= f.label :publisher, "Publisher: " %> <br>
+  <%= f.text_field :publisher, class: 'input' %>
+</div> <br>
+
+<div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+  <%= f.label :pages, "Pages: " %> <br>
+  <%= f.number_field :pages, class: 'input' %>
+</div> <br>
+
+  <div class="form-check">
+    <%= f.label :subjects, "Subject(s): " %> <br>
+    <%= f.collection_check_boxes :subject_ids, Subject.all, :id, :sub_name, class: 'checkbox' %>
+  </div>  <br>
+
+<%= f.submit, :class => 'btn' %>
+<% end %>
+):
+1:    
+2:    <%= form_for @book do |f| %>
+3:    
+4:    <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:title].any? %>">
+5:      <%= f.label :title, "Title: " %> <br>
+6:      <%= f.text_field :title, class: 'input' %>
+7:    </div> <br>
+8:    
+9:    <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+10:      <%= f.label :author, "Author: " %> <br>
+11:      <%= f.text_field :author, class: 'input' %>
+12:    </div> <br>
+13:    
+14:    <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+15:      <%= f.label :publisher, "Publisher: " %> <br>
+16:      <%= f.text_field :publisher, class: 'input' %>
+17:    </div> <br>
+18:    
+19:    <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:author].any? %>">
+20:      <%= f.label :pages, "Pages: " %> <br>
+21:      <%= f.number_field :pages, class: 'input' %>
+22:    </div> <br>
+23:    
+24:      <div class="form-check">
+25:        <%= f.label :subjects, "Subject(s): " %> <br>
+26:        <%= f.collection_check_boxes :subject_ids, Subject.all, :id, :sub_name, class: 'checkbox' %>
+27:      </div>  <br>
+28:    
+29:    <%= f.submit, :class => 'btn' %>
+30:    <% end %>
+  
+app/views/books/_form.html.erb:29: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/books/_form.html.erb:29: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/books/_form.html.erb:29: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/books/_form.html.erb:29: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/books/_form.html.erb:29: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/books/_form.html.erb:29: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/books/new.html.erb:5
+Started GET "/books/new" for ::1 at 2020-11-18 16:35:56 -0500
+Processing by BooksController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_error.html.erb (Duration: 0.4ms | Allocations: 173)
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 5.3ms | Allocations: 2429)
+  Rendered books/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 429)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 91)
+Completed 200 OK in 21ms (Views: 15.7ms | ActiveRecord: 1.1ms | Allocations: 12214)
+
+
+Started GET "/books/new" for ::1 at 2020-11-18 16:36:18 -0500
+Processing by BooksController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_error.html.erb (Duration: 0.6ms | Allocations: 173)
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 4.7ms | Allocations: 2335)
+  Rendered books/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 1.1ms | Allocations: 429)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+Completed 200 OK in 29ms (Views: 23.1ms | ActiveRecord: 0.8ms | Allocations: 12102)
+
+
+Started POST "/books" for ::1 at 2020-11-18 16:38:39 -0500
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"H5QCNhEwxaPebDta0ZOjJFNVpcG9yQ8/9OLgaXFeDNsRVP8y1WpuQaCNF0wehGX/6oU41u2EMyqBCfXqfaJPdQ==", "book"=>{"title"=>"bing bong bing bong", "author"=>"bing bong boys", "publisher"=>"bing bong men", "pages"=>"420", "subject_ids"=>["", "2"]}, "commit"=>"Create Book"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :subject_ids[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."title" = $1 LIMIT $2[0m  [["title", "bing bong bing bong"], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[36mBook Create (1.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "publisher", "pages", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "bing bong bing bong"], ["author", "bing bong boys"], ["publisher", "bing bong men"], ["pages", 420], ["created_at", "2020-11-18 21:38:39.735968"], ["updated_at", "2020-11-18 21:38:39.735968"]]
+  ↳ app/controllers/books_controller.rb:13:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:13:in `create'
+Redirected to http://localhost:3000/books/11
+Completed 302 Found in 15ms (ActiveRecord: 4.2ms | Allocations: 5783)
+
+
+Started GET "/books/11" for ::1 at 2020-11-18 16:38:39 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:47:in `set_book'
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" INNER JOIN "lesson_plans" ON "subjects"."id" = "lesson_plans"."subject_id" WHERE "lesson_plans"."book_id" = $1[0m  [["book_id", 11]]
+  ↳ app/views/books/show.html.erb:7
+  Rendered books/show.html.erb within layouts/application (Duration: 15.8ms | Allocations: 5270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 1.0ms | Allocations: 430)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 91)
+Completed 200 OK in 38ms (Views: 29.6ms | ActiveRecord: 1.3ms | Allocations: 14592)
+
+
