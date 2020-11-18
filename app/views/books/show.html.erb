@@ -1,8 +1,8 @@
  <div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
-<h3>Title: <%= @book.title %></h3>
-<h3>Author: <%= @book.author %></h3>
-<h3>Publisher: <%= @book.publisher %></h3>
-<h3>Pages: <%= @book.pages %></h3>
+<h4>Title: <%= @book.title %></h4>
+<h4>Author: <%= @book.author %></h4>
+<h4>Publisher: <%= @book.publisher %></h4>
+<h4>Pages: <%= @book.pages %></h4>
 <p>Subject(s): 
   <% @book.subjects.each do |subject| %>
   <li> <%= subject.sub_name %> </li>

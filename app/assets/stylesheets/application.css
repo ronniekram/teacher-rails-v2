@@ -149,6 +149,10 @@ li {
   list-style-type: none;
 }
 
+h4 {
+  font-family: Lora, serif;
+}
+
 .flex-wrap {
   -ms-flex-wrap: wrap!important;
   flex-wrap: wrap!important;
