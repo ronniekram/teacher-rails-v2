@@ -23948,3 +23948,152 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 254ms (Views: 232.4ms | ActiveRecord: 3.2ms | Allocations: 54233)
 
 
+Started GET "/signup" for ::1 at 2020-11-18 14:00:28 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 214)
+  Rendered users/registrations/_form.html.erb (Duration: 3.7ms | Allocations: 926)
+  Rendered users/shared/_links.html.erb (Duration: 1.1ms | Allocations: 590)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3634)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 1.9ms | Allocations: 791)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 91)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms | Allocations: 19412)
+
+
+Started POST "/users" for ::1 at 2020-11-18 14:00:46 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"7DsEes2pDm6FRGxNfNox79AxVj/4mbuqG3p1+8v5aSYSHM0x8VnTnArBe0QtN0CQ6OxZ2vcIPzBxV1MSh7pgjw==", "user"=>{"email"=>"ronnie@ronnie.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "name"=>"ronnie", "grade"=>"4th"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password_confirmation[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ronnie@ronnie.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "grade", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "ronnie@ronnie.com"], ["encrypted_password", "$2a$12$Ejuqhnh1C5X9/kJML5RHV.AIBtHO9aB/d9JXFUEffFnNMJ4R0U2oC"], ["name", "ronnie"], ["grade", "4th"], ["created_at", "2020-11-18 19:00:46.698837"], ["updated_at", "2020-11-18 19:00:46.698837"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 512ms (ActiveRecord: 6.4ms | Allocations: 11609)
+
+
+Started GET "/" for ::1 at 2020-11-18 14:00:46 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 351)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 8145)
+
+
+Started GET "/books/new" for ::1 at 2020-11-18 14:00:53 -0500
+Processing by BooksController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_error.html.erb (Duration: 0.8ms | Allocations: 179)
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 10.7ms | Allocations: 3367)
+  Rendered books/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 4052)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.6ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 105ms (Views: 23.9ms | ActiveRecord: 15.8ms | Allocations: 33692)
+
+
+Started GET "/books/new" for ::1 at 2020-11-18 14:02:00 -0500
+Processing by BooksController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_error.html.erb (Duration: 0.9ms | Allocations: 173)
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/books/_form.html.erb:26
+  Rendered books/_form.html.erb (Duration: 3.0ms | Allocations: 2288)
+  Rendered books/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2978)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 1.1ms | Allocations: 896)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 91)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.6ms | Allocations: 12541)
+
+
+Started GET "/users/lesson_plans" for ::1 at 2020-11-18 14:16:57 -0500
+Processing by LessonPlansController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lesson_plans/index.html.erb within layouts/application
+  [1m[36mLessonPlan Exists? (5.6ms)[0m  [1m[34mSELECT 1 AS one FROM "lesson_plans" WHERE "lesson_plans"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/lesson_plans/index.html.erb:5
+  Rendered lesson_plans/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1720)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 1.1ms | Allocations: 893)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 91)
+Completed 200 OK in 46ms (Views: 35.5ms | ActiveRecord: 6.6ms | Allocations: 11048)
+
+
+Started GET "/books" for ::1 at 2020-11-18 14:16:59 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_search.html.erb (Duration: 1.5ms | Allocations: 380)
+  [1m[36mBook Load (4.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/books/index.html.erb:5
+  Rendered books/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 28ms (Views: 15.3ms | ActiveRecord: 5.4ms | Allocations: 9694)
+
+
+Started GET "/books" for ::1 at 2020-11-18 14:18:20 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_search.html.erb (Duration: 0.9ms | Allocations: 373)
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1815)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 1.0ms | Allocations: 896)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 1.3ms | Allocations: 11065)
+
+
+Started GET "/books" for ::1 at 2020-11-18 14:19:55 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_search.html.erb (Duration: 0.4ms | Allocations: 193)
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 1.7ms | Allocations: 15811)
+
+
+Started GET "/books" for ::1 at 2020-11-18 14:19:57 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_search.html.erb (Duration: 0.3ms | Allocations: 188)
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1321)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 349)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.3ms | Allocations: 8476)
+
+
+Started GET "/books" for ::1 at 2020-11-18 14:21:22 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_search.html.erb (Duration: 0.2ms | Allocations: 188)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 349)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.5ms | Allocations: 15374)
+
+

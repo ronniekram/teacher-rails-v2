@@ -144,6 +144,14 @@ a {
   color: rgb(55,50,46);
 }
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
 .flex-wrap {
   -ms-flex-wrap: wrap!important;
   flex-wrap: wrap!important;

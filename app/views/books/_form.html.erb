@@ -1,4 +1,4 @@
-<div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
+
 <%= form_for @book do |f| %>
 
 <div class="form-group d-flex flex-wrap<%= ' field_with_errors' if @book.errors[:title].any? %>">
@@ -28,4 +28,3 @@
 
 <%= f.submit %>
 <% end %>
-</div>

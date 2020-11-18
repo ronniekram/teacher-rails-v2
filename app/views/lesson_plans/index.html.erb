@@ -1,9 +1,13 @@
-<h3> <%= current_user.name %>'s Lesson Plans</h3>
+<div class="d-flex float-left flex-column justify-content-lg-start" style="background: rgba(210,194,179,0.83);border-radius: 10px;color: rgb(27,26,26);margin: 20px;padding: 20px;border: 1px solid rgb(27,26,26) ;">
 
-<% if current_user.lesson_plans.empty? %>
-<p> You don't have any lesson plans yet. <%= link_to "Add one?", new_lesson_plan_path %></p>
-<% else %>
-  <% current_user.lesson_plans.each do |plan| %>
-  <li> <%= link_to "#{plan.name} - #{plan.lesson_start}", lesson_plan_path(plan) %></li>
+  <h3> <%= current_user.name %>'s Lesson Plans</h3>
+
+  <% if current_user.lesson_plans.empty? %>
+    <p> You don't have any lesson plans yet. <%= link_to "Add one?", new_lesson_plan_path %></p>
+  <% else %>
+    <% current_user.lesson_plans.each do |plan| %>
+      <li> <%= link_to "#{plan.name} - #{plan.lesson_start}", lesson_plan_path(plan) %></li>
+    <% end %>
   <% end %>
-<% end %>
+
+</div>
