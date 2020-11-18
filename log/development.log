@@ -24974,3 +24974,130 @@ Processing by BooksController#show as HTML
 Completed 200 OK in 38ms (Views: 29.6ms | ActiveRecord: 1.3ms | Allocations: 14592)
 
 
+  [1m[36mBook Load (1.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/books" for ::1 at 2020-11-18 16:42:15 -0500
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_search.html.erb (Duration: 1.4ms | Allocations: 392)
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1966)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 1.0ms | Allocations: 9062)
+
+
+Started GET "/books/2" for ::1 at 2020-11-18 16:42:17 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:47:in `set_book'
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" INNER JOIN "lesson_plans" ON "subjects"."id" = "lesson_plans"."subject_id" WHERE "lesson_plans"."book_id" = $1[0m  [["book_id", 2]]
+  ↳ app/views/books/show.html.erb:7
+  Rendered books/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1046)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 149)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 19ms (Views: 12.9ms | ActiveRecord: 1.3ms | Allocations: 8513)
+
+
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" INNER JOIN "lesson_plans" ON "subjects"."id" = "lesson_plans"."subject_id" WHERE "lesson_plans"."book_id" = $1 LIMIT $2[0m  [["book_id", 1], ["LIMIT", 11]]
+  [1m[36mLessonPlan Load (0.3ms)[0m  [1m[34mSELECT "lesson_plans".* FROM "lesson_plans" ORDER BY "lesson_plans"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/lesson_plans" for ::1 at 2020-11-18 16:43:50 -0500
+Processing by LessonPlansController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lesson_plans/index.html.erb within layouts/application
+  [1m[36mLessonPlan Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "lesson_plans" WHERE "lesson_plans"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/lesson_plans/index.html.erb:5
+  Rendered lesson_plans/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 1.1ms | Allocations: 8704)
+
+
+Started GET "/users/lesson_plans/new" for ::1 at 2020-11-18 16:43:52 -0500
+Processing by LessonPlansController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lesson_plans/new.html.erb within layouts/application
+  Rendered lesson_plans/_error.html.erb (Duration: 0.6ms | Allocations: 175)
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/lesson_plans/_form.html.erb:11
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/lesson_plans/_form.html.erb:22
+  Rendered lesson_plans/_form.html.erb (Duration: 34.7ms | Allocations: 8570)
+  Rendered lesson_plans/new.html.erb within layouts/application (Duration: 37.2ms | Allocations: 9264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.2ms | Allocations: 153)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 69ms (Views: 43.5ms | ActiveRecord: 6.3ms | Allocations: 22407)
+
+
+Started POST "/users/lesson_plans" for ::1 at 2020-11-18 16:44:12 -0500
+Processing by LessonPlansController#create as HTML
+  Parameters: {"authenticity_token"=>"oeE0DPi55e2un3twKDC+Bi7QylcAOiymir1MifucUcfm7V53SUgwQJHh3U35mrz5oJ5v/3Pgn6hKOMzWmJ/KTA==", "lesson_plan"=>{"name"=>"dsdfs", "subject_id"=>"2", "subject_attributes"=>{"sub_name"=>"sdfsdfsdfsd"}, "book_ids"=>["", "2", "3"], "start_date"=>"2020-11-28", "duration"=>"5"}, "commit"=>"Create Lesson plan"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" IN ($1, $2)[0m  [["id", 2], ["id", 3]]
+  ↳ app/controllers/lesson_plans_controller.rb:15:in `create'
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lesson_plans_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mBook Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."title" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["title", "A Book About Nothing"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mBook Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."title" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["title", "Left Hand of Darkness"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mLessonPlan Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "lesson_plans" WHERE "lesson_plans"."name" = $1 LIMIT $2[0m  [["name", "dsdfs"], ["LIMIT", 1]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mLessonPlan Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "lesson_plans" WHERE "lesson_plans"."start_date" = $1 LIMIT $2[0m  [["start_date", "2020-11-28"], ["LIMIT", 1]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mSubject Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "subjects" WHERE "subjects"."sub_name" = $1 LIMIT $2[0m  [["sub_name", "sdfsdfsdfsd"], ["LIMIT", 1]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mSubject Create (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("sub_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["sub_name", "sdfsdfsdfsd"], ["created_at", "2020-11-18 21:44:12.681971"], ["updated_at", "2020-11-18 21:44:12.681971"]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mLessonPlan Create (0.8ms)[0m  [1m[32mINSERT INTO "lesson_plans" ("name", "start_date", "duration", "user_id", "subject_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "dsdfs"], ["start_date", "2020-11-28"], ["duration", 5], ["user_id", 1], ["subject_id", 5], ["created_at", "2020-11-18 21:44:12.683371"], ["updated_at", "2020-11-18 21:44:12.683371"]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mBook Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."title" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["title", "A Book About Nothing"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "lesson_plan_id" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["lesson_plan_id", 1], ["updated_at", "2020-11-18 21:44:12.686783"], ["id", 2]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mBook Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."title" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["title", "Left Hand of Darkness"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "lesson_plan_id" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["lesson_plan_id", 1], ["updated_at", "2020-11-18 21:44:12.691561"], ["id", 3]]
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lesson_plans_controller.rb:16:in `create'
+Redirected to http://localhost:3000/users/lesson_plans/1
+Completed 302 Found in 35ms (ActiveRecord: 7.4ms | Allocations: 20410)
+
+
+Started GET "/users/lesson_plans/1" for ::1 at 2020-11-18 16:44:12 -0500
+Processing by LessonPlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLessonPlan Load (0.3ms)[0m  [1m[34mSELECT "lesson_plans".* FROM "lesson_plans" WHERE "lesson_plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lesson_plans_controller.rb:58:in `set_lesson_plan'
+  Rendering lesson_plans/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lesson_plans/show.html.erb:9
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."lesson_plan_id" = $1[0m  [["lesson_plan_id", 1]]
+  ↳ app/views/lesson_plans/show.html.erb:12
+  Rendered lesson_plans/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 1.2ms | Allocations: 9870)
+
+
+  [1m[36mLessonPlan Load (0.3ms)[0m  [1m[34mSELECT "lesson_plans".* FROM "lesson_plans" ORDER BY "lesson_plans"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLessonPlan Load (0.6ms)[0m  [1m[34mSELECT "lesson_plans".* FROM "lesson_plans" ORDER BY "lesson_plans"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLessonPlan Load (0.9ms)[0m  [1m[34mSELECT "lesson_plans".* FROM "lesson_plans" ORDER BY "lesson_plans"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLessonPlan Load (0.9ms)[0m  [1m[34mSELECT "lesson_plans".* FROM "lesson_plans" ORDER BY "lesson_plans"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."lesson_plan_id" = $1 LIMIT $2[0m  [["lesson_plan_id", 1], ["LIMIT", 11]]
