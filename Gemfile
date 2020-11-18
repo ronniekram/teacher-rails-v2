@@ -20,6 +20,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pry'
 
+gem 'google-api-client', '~> 0.34'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 # creates user model with all routes, sessions and authentication
