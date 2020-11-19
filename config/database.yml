@@ -82,6 +82,6 @@ production:
   <<: *default
   database: teachers-library_production
   username: teachers-library
-  password: <%= ENV['VILLAGERS_BACK_DATABASE_PASSWORD'] %>
-  url:  <%= ENV["DATABASE_URL"] %>
-  pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
+  password: <%= ENV['TEACHERS-LIBRARY_DATABASE_PASSWORD'] %>
+  # url:  <%= ENV["DATABASE_URL"] %>
+  # pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
