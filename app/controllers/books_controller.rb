@@ -6,7 +6,7 @@
 
     def new 
       @book = Book.new
-      @book.subjects.build
+     # @book.subjects.build
     end 
 
     def create 
@@ -38,9 +38,9 @@
       params.require(:book).permit(:title, 
       :author, 
       :publisher,
-      :pages,
-      :subject_ids,
-      :subject_attributes => [:sub_name])
+      :pages
+      #:subject_ids,
+      #:subject_attributes => [:sub_name])
     end  
     
     def set_book 

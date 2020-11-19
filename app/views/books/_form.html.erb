@@ -21,10 +21,10 @@
   <%= f.number_field :pages, class: 'input' %>
 </div> <br>
 
-  <div class="form-check">
+ <!-- <div class="form-check">
     <%= f.label :subjects, "Subject(s): " %> <br>
     <%= f.collection_check_boxes :subject_ids, Subject.all, :id, :sub_name, class: 'checkbox' %>
-  </div>  <br>
+  </div>  <br> -->
 
 <%= f.submit class: 'btn' %>
 <% end %>
