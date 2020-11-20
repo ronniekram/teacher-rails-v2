@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   
   resources :books, except: [:destroy]
   resources :subjects, only: [:index, :new, :create]
+  resources :search
 end

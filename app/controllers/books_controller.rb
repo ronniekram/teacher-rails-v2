@@ -39,9 +39,7 @@
       params.require(:book).permit(:title, 
       :author, 
       :publisher,
-      :pages,
-      :subject_ids,
-      :subject_attributes => [:sub_name])
+      :pages)
     end  
     
     def set_book 
