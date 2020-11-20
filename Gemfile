@@ -21,6 +21,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'pry'
 
 gem 'google-api-client', '~> 0.34'
+gem 'googlebooks', '~> 0.0.9'
 gem 'httparty'
 
 # Use Active Storage variant
